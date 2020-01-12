@@ -3,6 +3,11 @@
   <p>
     <label for="title">Название</label><br>
     <%= f.text_field(:title, {:class => 'form-control'}) %>
+    <% if @post.errors.any? %>
+      <% @post.errors.full_messages.each do |msg| %>
+        <div class="alert alert-danger"><%= msg %></div>
+      <% end %>
+    <% end %>
   </p>
   <p>
     <label for="body">Текст</label><br>
