@@ -16,7 +16,7 @@
         <span class="p-2 text-dark"><%= link_to "Главная страница", home_path %></span>
         <span class="p-2 text-dark"><%= link_to "О нас", about_path %></span>
       </nav>
-      <span class="btn btn-outline-primary"><%= link_to "Добавление статьи", new_post_path %></span>
+      <%= link_to "Добавление статьи", new_post_path, :class => "btn btn-outline-primary" %>
     </div>
     <div class="container">
       <%= yield %>
